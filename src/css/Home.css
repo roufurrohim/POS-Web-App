@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    width: 100% !important;
+    padding: 0 !important;
+    display: flex;
+    font-family: 'Airbnb Cereal App Medium', sans-serif;
+}
+
+.rowLeft {
+    width: 70%;
+}
+
+.container-fluid .rowLeft .navbar {
+    width: 100%;
+    height: 60px;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 93.5vh;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 7%;
+    padding-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.item {
+    width: 93%;
+    background-color: rgba(190, 195, 202, 0.3);
+    
+}
+
+.rowRight {
+    width: 30%;
+}

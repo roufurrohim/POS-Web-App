@@ -1,0 +1,27 @@
+.products{
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.cardMenu {
+    margin: 20px 40px !important;
+    background: none !important;
+    border: none !important;
+}
+
+.cardMenu img {
+    width: 270px;
+    height: 150px;
+    margin: 0px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.cardMenu .name, .price {
+    margin: 2px !important;
+    padding: 0px !important;
+    font-size: 20px;
+}
