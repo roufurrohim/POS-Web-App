@@ -10,6 +10,11 @@ nav .container-fluid .title {
     /* font-size: 28px; */
 }
 
+.badge {
+    padding: 1px 9px !important;
+    margin-left: 10px !important;
+}
+
 .containEmpty {
     display: flex;
     flex-direction: column;
@@ -58,4 +63,42 @@ nav .container-fluid .title {
 #price, p {
     margin-top: 100px;
     margin-right: 10px;
+}
+
+.divCheckout {
+    display: flex !important;
+    flex-direction: column;
+    margin-left: 40px;
+    justify-content: center !important;
+}
+
+.divCheckout .checkTotal {
+    margin-left: 35px !important;
+}
+
+.price{
+    font-weight: bold;
+    margin-left: 10px !important;
+}
+.checkout{
+    width: 520px;
+}
+.checkoutBtn{
+    border: none;
+    background-color:  #57CAD5;
+    color: white;
+    border-radius: 10px;
+}
+.cancel {
+    border: none;
+    background-color: #F24F8A;
+    color: white;
+    border-radius: 10px;
+}
+.note{
+    font-size: 15px;
+}
+
+.pointer{
+    cursor: pointer;
 }

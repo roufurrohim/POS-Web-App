@@ -4,7 +4,9 @@ import '../css/AddProducts.css'
 
 const AddProducts = ({ showModal, handleClose, name, picture, price, category, handleSubmit, changeHandler}) => {
   return (
-    <Modal show={showModal} onHide={handleClose} className="modals">
+    <Modal show={showModal} onHide={handleClose} className="modals" size="md"
+    aria-labelledby="contained-modal-title-vcenter"
+    centered>
       <Modal.Header>
         <Modal.Title>Add Item</Modal.Title>
       </Modal.Header>
@@ -37,13 +39,13 @@ const AddProducts = ({ showModal, handleClose, name, picture, price, category, h
             <Form.Label column sm={2}>
               Price
             </Form.Label>
-            <Col sm={10}>
+            <Col sm={7}>
               <Form.Control type="text" value={price} name="price" onChange={(event)=>{changeHandler(event)}}/>
             </Col>
           </Form.Group>
-          <Form.Group as={Col} controlId="formGridState">
+          <Form.Group as={Col} controlId="formGridState" className="category">
             <Form.Label>Category</Form.Label>
-            <Form.Select value={category} name="category" onChange={(event)=>{changeHandler(event)}}>
+            <Form.Select value={category} name="category" onChange={(event)=>{changeHandler(event)}} className="select">
               <option>Category</option>
               <option value="coffee">Coffee</option>
               <option value="non coffee">Non Coffee</option>
@@ -53,10 +55,10 @@ const AddProducts = ({ showModal, handleClose, name, picture, price, category, h
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="danger" onClick={handleClose} className="cancel">
+        <Button onClick={handleClose} className="cancel">
           Cancel
         </Button>
-        <Button variant="primary" type="reset" onClick={handleSubmit}>
+        <Button type="reset" onClick={handleSubmit} className="add">
           Add
         </Button>
       </Modal.Footer>

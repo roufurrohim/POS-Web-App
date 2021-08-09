@@ -1,5 +1,47 @@
-Modal.Header {
-    width: 1440px !important;
-    height: 1024px;
-    background: #aaa;
+.modal-content {
+    font-family: 'Airbnb Cereal App Medium', sans-serif;
+}
+.modal-header {
+    border-bottom: none !important;
+}
+
+input {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25) !important;
+}
+
+.category {
+    display: flex !important;
+    align-items: center !important;
+    /* justify-content: space-between !important; */
+}
+
+.category .select {
+    width: 55% !important;
+    margin-left: 14px;
+    color: #CECECE;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.category option {
+    color: #000;
+}
+
+.modal-footer {
+    border-top: none !important;
+}
+
+.modal-footer .cancel {
+    background-color: #F24F8A !important;
+    border-radius: 10px !important;
+    border: none !important;
+    width: 125px;
+    height: 40px;
+}
+
+.modal-footer .add {
+    background: #57CAD5 !important;
+    border-radius: 10px !important;
+    border: none !important;
+    width: 125px;
+    height: 40px;
 }

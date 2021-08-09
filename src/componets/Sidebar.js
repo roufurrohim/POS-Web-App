@@ -38,12 +38,15 @@ class Sidebar extends React.Component {
       showModal: false,
     });
   };
+  
+  //untuk update state
   changeHandler = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
     });
   };
 
+  //untuk mengirim data ke state product di home
   handleSubmit = (e) => {
     e.preventDefault();
 
