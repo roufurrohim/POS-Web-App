@@ -1,17 +1,15 @@
 nav {
     height: 60px;
     background-color: #fff;
-    box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.25);
 }
 
 nav .container-fluid .title {
     position: relative;
     left: 50% !important;
-    /* font-size: 28px; */
 }
 
 .badge {
-    padding: 1px 9px !important;
+    padding: 4px 10px !important;
     margin-left: 10px !important;
 }
 
@@ -35,13 +33,10 @@ nav .container-fluid .title {
     margin-top: -30px;
 }
 
-.containEmpty p {
+.containEmpty .note {
     color: #CECECE;
     font-size: 20px;
 }
-/* span {
-    font-size: 0.8rem;
-} */
 
 .Cart {
     margin-top: 30px;
@@ -60,8 +55,8 @@ nav .container-fluid .title {
     border-radius: 5px;
 }
 
-#price, p {
-    margin-top: 100px;
+#price .total {
+    padding-top: 100px;
     margin-right: 10px;
 }
 

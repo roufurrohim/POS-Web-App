@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../componets/Navbar";
-import Sidebar from "../componets/Sidebar";
+// import Sidebar from "../componets/Sidebar";
 import Items from "../componets/Items";
 import Cart from "../componets/Cart";
 import "../css/Home.css";
@@ -81,14 +81,13 @@ class Home extends React.Component {
       this.setState({
         cart : []
       })
-      console.log("cancel")
     }
   render() {
-    const add = (data) => {
-      this.setState({
-        products: [...this.state.products, data],
-      });
-    };
+    // const add = (data) => {
+    //   this.setState({
+    //     products: [...this.state.products, data],
+    //   });
+    // };
 
     // // check id cart
     let checkCart = (id) => {
@@ -151,15 +150,15 @@ class Home extends React.Component {
 
     
     return (
-      <div className="container-fluid">
+      <div>
         <div className="rowLeft">
           <div className="navbar">
             <Navbar />
           </div>
           <div className="content">
-            <div className="menu">
+            {/* <div className="menu">
               <Sidebar addData={add} />
-            </div>
+            </div> */}
             <div className="item">
               <Items data={this.state.products} action={idFromItem} />
             </div>

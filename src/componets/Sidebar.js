@@ -65,8 +65,7 @@ class Sidebar extends React.Component {
   addProd = (addProducts) => {
     this.props.addData(addProducts)
   }
-
-// }
+  
   render(){
     return (
       <div className="row">

@@ -12,7 +12,6 @@ class Cart extends React.Component {
   };
   
   render() {
-    const notif = this.props.dataCart.length
     let total = this.props.dataCart.map((e)=> e.price * e.qty).reduce((prev, current)=> {
         return prev + current
     }, 0)
@@ -27,7 +26,7 @@ class Cart extends React.Component {
                   <span
                     id="notif"
                     className="badge bg-info rounded-circle"
-                  >{notif}</span>
+                  >{this.props.dataCart.length}</span>
                 </h1>
               </div>
             </nav>
@@ -38,7 +37,7 @@ class Cart extends React.Component {
               alt="Empty"
             />
             <h4>Your cart is empty</h4>
-            <p>Please add some items from the menu</p>
+            <p className="note">Please add some items from the menu</p>
           </div>
         </div>
       );
@@ -53,7 +52,7 @@ class Cart extends React.Component {
                   <span
                     id="notif"
                     className="badge bg-info rounded-circle"
-                  >{notif}</span>
+                  >{this.props.dataCart.length}</span>
                 </h1>
               </div>
             </nav>
@@ -95,7 +94,7 @@ class Cart extends React.Component {
                   </div>
                 </div>
                 <div id="price">
-                  <p>
+                  <p className="total">
                     <b>Rp. {this.numberWithCommas(e.price * e.qty)}</b>
                   </p>
                 </div>
