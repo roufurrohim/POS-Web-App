@@ -18,13 +18,13 @@ class Sidebar extends React.Component {
     };
   }
   resetInput = () => {
-    this.setState ({
+    this.setState({
       showModal: false,
       name: "",
       picture: "",
       price: "",
       category: "category",
-    })
+    });
   };
   //untuk handle show modal
   handleShow = () => {
@@ -38,7 +38,7 @@ class Sidebar extends React.Component {
       showModal: false,
     });
   };
-  
+
   //untuk update state
   changeHandler = (e) => {
     this.setState({
@@ -52,21 +52,21 @@ class Sidebar extends React.Component {
 
     this.handleClose();
 
-    const addProducts = {
+    const addDataProducts = {
       name: this.state.name,
       picture: this.state.picture,
       price: this.state.price,
       category: this.state.category,
     };
-    this.addProd(addProducts)
-    this.resetInput()
+    this.props.addProduct(addDataProducts);
+    this.resetInput();
   };
-  
-  addProd = (addProducts) => {
-    this.props.addData(addProducts)
-  }
-  
-  render(){
+
+  // addProd = (addProducts) => {
+  //   this.props.addData(addProducts);
+  // };
+
+  render() {
     return (
       <div className="row">
         <div className="icon1">

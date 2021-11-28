@@ -75,19 +75,21 @@ class Home extends React.Component {
         },
       ],
       cart: [],
+      modalShow: false,
     };
   }
-    cancel = () => {
-      this.setState({
-        cart : []
-      })
-    }
+  cancel = () => {
+    this.setState({
+      cart: [],
+    });
+  };
+
   render() {
-    // const add = (data) => {
-    //   this.setState({
-    //     products: [...this.state.products, data],
-    //   });
-    // };
+    const add = (data) => {
+      this.setState({
+        products: [...this.state.products, data],
+      });
+    };
 
     // // check id cart
     let checkCart = (id) => {
@@ -100,32 +102,31 @@ class Home extends React.Component {
       return findData;
     };
 
-    const addqty = (id) =>{
-      const index = this.state.cart.findIndex((x=> x.id === id))
-      const newItem = [...this.state.cart]
-      newItem[index].qty++
+    const addqty = (id) => {
+      const index = this.state.cart.findIndex((x) => x.id === id);
+      const newItem = [...this.state.cart];
+      newItem[index].qty++;
       this.setState({
-        cart: [...newItem]
-      })
-    }
+        cart: [...newItem],
+      });
+    };
 
-    const decqty = (id) =>{
-      const index = this.state.cart.findIndex((x=> x.id === id))
+    const decqty = (id) => {
+      const index = this.state.cart.findIndex((x) => x.id === id);
       // eslint-disable-next-line react/no-direct-mutation-state
-      const newItem = [...this.state.cart]
+      const newItem = [...this.state.cart];
       if (newItem[index].qty !== 1) {
-        newItem[index].qty--
+        newItem[index].qty--;
         this.setState({
-          cart: [...newItem]
-        }) 
-      }
-       else {
-        newItem.splice([index],1)
+          cart: [...newItem],
+        });
+      } else {
+        newItem.splice([index], 1);
         this.setState({
-          cart:[...newItem]
-        })
+          cart: [...newItem],
+        });
       }
-    }
+    };
 
     let idFromItem = (id) => {
       // eslint-disable-next-line array-callback-return
@@ -133,7 +134,7 @@ class Home extends React.Component {
         if (e.id === id) {
           const newCart = {
             ...e,
-            qty: 1
+            qty: 1,
           };
           // console.log(newCart);
           const check = checkCart(id);
@@ -142,30 +143,45 @@ class Home extends React.Component {
               cart: [...this.state.cart, newCart],
             });
           } else {
-            addqty(id)
+            addqty(id);
           }
         }
       });
     };
 
-    
+    const show = () => {
+      this.setState({ modalShow: !this.state.modalShow });
+      console.log("modal show");
+    };
+
     return (
-      <div>
-        <div className="rowLeft">
-          <div className="navbar">
-            <Navbar />
-          </div>
-          <div className="content">
-            {/* <div className="menu">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-lg-8 rowLeft">
+            {/* <div className="navbar"> */}
+            <Navbar addData={add} />
+            {/* </div> */}
+            <div className="content">
+              {/* <div className="menu">
               <Sidebar addData={add} />
             </div> */}
-            <div className="item">
-              <Items data={this.state.products} action={idFromItem} />
+              <div className="item">
+                <Items data={this.state.products} action={idFromItem} />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="rowRight">
-          <Cart dataCart={this.state.cart} actionAdd={addqty} actionDec={decqty} actCancel={this.cancel}/>
+          <div className="col-lg-4 rowRight">
+            <div>
+              <Cart
+                dataCart={this.state.cart}
+                actionAdd={addqty}
+                actionDec={decqty}
+                actCancel={this.cancel}
+                showModal={show}
+                show={this.state.modalShow}
+              />
+            </div>
+          </div>
         </div>
       </div>
     );

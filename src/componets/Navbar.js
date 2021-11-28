@@ -1,10 +1,10 @@
 import React from "react";
-// import Sidebar from "./Sidebar";
-import Fork from "../img/fork.svg";
-import Clipboard from "../img/clipboard.svg";
-import Add from "../img/add.svg";
-import AddProducts from "./ModulAdd";
-import { Link } from "react-router-dom";
+import Sidebar from "./Sidebar";
+// import Fork from "../img/fork.svg";
+// import Clipboard from "../img/clipboard.svg";
+// import Add from "../img/add.svg";
+// import AddProducts from "./ModulAdd";
+// import { Link } from "react-router-dom";
 import "../css/Navbar.css";
 
 class Navbar extends React.Component {
@@ -32,13 +32,12 @@ class Navbar extends React.Component {
 
   // handle show sidebar
   handleOn = () => {
-      this.setState({ showSide: true})
-      console.log("sidebar muncul");
-  }
+    this.setState({ showSide: !this.state.showSide });
+  };
 
   handleOff = () => {
-      this.setState({ showSide: false})
-  }
+    this.setState({ showSide: false });
+  };
 
   //untuk handle show modal
   handleShow = () => {
@@ -72,7 +71,7 @@ class Navbar extends React.Component {
       price: this.state.price,
       category: this.state.category,
     };
-    this.addProd(addProducts);
+    this.props.addData(addProducts);
     this.resetInput();
   };
 
@@ -83,14 +82,11 @@ class Navbar extends React.Component {
   render() {
     return (
       <div>
-        {/* <div className={th}>
-          
-        </div> */}
-        <nav className="navbar navbar-light">
+        <nav className="navbar navbar-light navHome">
           <div className="container-fluid">
             <button
-              onclick={() => this.handleOn()}
-              className="navbar-toggler"
+              onClick={this.handleOn}
+              className="navbar-toggler border-0"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarToggleExternalContent"
@@ -115,37 +111,12 @@ class Navbar extends React.Component {
             </button>
           </div>
         </nav>
-        <div className="collapse" id="navbarToggleExternalContent">
-           {/* <Sidebar /> */}
-          <div className="row">
-            <div className="icon1">
-              <Link to="/">
-                <img src={Fork} className="items" alt="fork" />
-              </Link>
-            </div>
-
-            <div className="icon2">
-              <Link to="/history">
-                <img src={Clipboard} className="history" alt="clipboard" />
-              </Link>
-            </div>
-
-            <div className="icon3">
-              <button
-                type="button"
-                // className="btn"
-                onClick={() => this.handleShow()}
-              >
-                <img src={Add} className="add" alt="add" />
-              </button>
-            </div>
-            <AddProducts
-              handleClose={this.handleClose}
-              {...this.state}
-              handleSubmit={this.handleSubmit}
-              changeHandler={this.changeHandler}
-            />
-          </div>
+        <div
+          className={
+            this.state.showSide ? "d-block position-absolute menu" : "d-none"
+          }
+        >
+          <Sidebar addProduct={this.addProd} />
         </div>
       </div>
     );

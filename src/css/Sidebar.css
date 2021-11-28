@@ -22,3 +22,23 @@
     height: 45px;
     margin: 20px 0px;
 }
+
+.cancelAdd {
+    border: none !important;
+    background-color: #f24f8a !important;
+    font-size: 20px !important;
+    line-height: 30px !important;
+    color: #ffffff !important;
+    border-radius: 10px !important;
+    width: 30% !important;
+}
+
+.addModal {
+    border: none !important;
+  background-color: #57cad5 !important;
+  font-size: 20px !important;
+  line-height: 30px !important;
+  color: #ffffff !important;
+  border-radius: 10px !important;
+  width: 30% !important;
+}
