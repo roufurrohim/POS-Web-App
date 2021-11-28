@@ -10,11 +10,11 @@
 <h3 align="center">Point Of Sale</h3>
 
   <p align="center">
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/roufurrohim/frontend-with-react.git">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/roufurrohim/frontend-with-react.git">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/roufurrohim/frontend-with-react.git">Request Feature</a>
   </p>
 </div>
 
@@ -86,7 +86,7 @@ POS is a simple point of sale web application. POS is built for fast food restau
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/roufurrohim/frontend-with-react.git
    ```
 2. Install NPM packages
    ```sh
