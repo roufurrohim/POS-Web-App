@@ -10,7 +10,7 @@
 <h3 align="center">Point Of Sale</h3>
 
   <p align="center">
-    <a href="https://github.com/roufurrohim/frontend-with-react.git">View Demo</a>
+    <a href="https://pos-web-app.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/roufurrohim/frontend-with-react.git">Report Bug</a>
     ·
@@ -52,7 +52,7 @@
 
 ![Product Name Screen Shot](img/home.png)
 
-POS is a simple point of sale web application. POS is built for fast food restaurant point of sale, but of course, it can be applied to must restaurants that have a similiar flow. It created with simplicity and robustness in mind and intended for my exploration of Javascript technologies. POS made with ReactJS and react-bootstrap.
+POS is a simple point of sale web application. POS is built for fast food restaurant. It can be applied to must restaurants that have a similiar flow. POS made with ReactJS and react-bootstrap.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -86,7 +86,7 @@ POS is a simple point of sale web application. POS is built for fast food restau
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/roufurrohim/frontend-with-react.git
+   git clone https://github.com/roufurrohim/POS-Web-App
    ```
 2. Install NPM packages
    ```sh
